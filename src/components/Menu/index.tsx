@@ -54,6 +54,7 @@ export const Menu: React.FC = () => {
           {links.map((item, index) => (
             <a
               href={item.value}
+              key={item.value}
               className={
                 index === 0 && !url.length
                   ? "active"
