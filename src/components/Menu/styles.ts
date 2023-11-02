@@ -4,6 +4,7 @@ export const Container = styled.header`
   width: 100%;
   height: 4.52rem;
   background-color: var(--red-900);
+  padding-inline: 1rem;
 `;
 
 export const Wrapper = styled.nav`
@@ -19,6 +20,7 @@ export const LinksWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+  background-color: var(--red-900);
 
   > a {
     line-height: 4.52rem;
@@ -49,5 +51,35 @@ export const LinksWrapper = styled.div`
         background-color: var(--red-500);
       }
     }
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    top: 4.52rem;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 4.52rem);
+    flex-direction: column;
+    transition: 0.6s;
+
+    &.active {
+      left: 0;
+    }
+  }
+`;
+
+export const ButtonMobileMenu = styled.button`
+  background-color: transparent;
+  /* border: 1px solid white; */
+  border: 0;
+  padding: 0.5rem;
+  color: white;
+
+  > svg {
+    transform: scale(1.8);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
   }
 `;

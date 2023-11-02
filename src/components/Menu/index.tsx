@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import { LiaTimesSolid } from "react-icons/lia";
 import * as S from "./styles";
 
 const links = [
@@ -34,6 +36,7 @@ const links = [
 
 export const Menu: React.FC = () => {
   const [url, setUrl] = useState("");
+  const [isMobileActive, setIsMobileActive] = useState(false);
 
   useEffect(() => {
     setUrl(window.location.href.split("#")[1] ?? "");
@@ -42,7 +45,11 @@ export const Menu: React.FC = () => {
   return (
     <S.Container>
       <S.Wrapper>
-        <S.LinksWrapper>
+        <S.ButtonMobileMenu onClick={() => setIsMobileActive((prev) => !prev)}>
+          {isMobileActive ? <LiaTimesSolid /> : <FiMenu />}
+        </S.ButtonMobileMenu>
+
+        <S.LinksWrapper className={isMobileActive ? "active" : ""}>
           {links.map((item, index) => (
             <a
               href={item.value}
