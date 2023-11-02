@@ -3,9 +3,9 @@ import * as S from "./styles";
 
 interface IButton {
   children: ReactNode;
-  themeColor?: "red" | "outline";
+  color?: "red" | "outline";
 }
 
-export const Button: FC<IButton> = ({ children, themeColor = "red" }) => {
-  return <S.Container themeColor={themeColor}>{children}</S.Container>;
+export const Button: FC<IButton> = ({ children, color = "red" }) => {
+  return <S.Container color={color}>{children}</S.Container>;
 };

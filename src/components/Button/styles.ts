@@ -1,11 +1,11 @@
 import styled, { css } from "styled-components";
 
 interface IContainer {
-  themeColor: "red" | "outline";
+  color: "red" | "outline";
 }
 
 export const Container = styled.button<IContainer>`
-  padding: 0.75rem 1rem;
+  padding: 1rem 1rem 0.75rem;
   border-radius: 0.1875rem;
   text-transform: uppercase;
   border: 0;
@@ -23,8 +23,8 @@ export const Container = styled.button<IContainer>`
     z-index: 100;
   }
 
-  ${({ themeColor }) =>
-    themeColor === "red"
+  ${({ color }) =>
+    color === "red"
       ? css`
           background-color: var(--red-500);
 
