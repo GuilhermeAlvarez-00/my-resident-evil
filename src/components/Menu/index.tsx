@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { FiMenu } from "react-icons/fi";
-import { LiaTimesSolid } from "react-icons/lia";
+import { FaBars } from "react-icons/fa";
+import { MdOutlineClose } from "react-icons/md";
 import * as S from "./styles";
+import { Button } from "../Button";
 
 const links = [
   {
@@ -46,7 +47,7 @@ export const Menu: React.FC = () => {
     <S.Container>
       <S.Wrapper>
         <S.ButtonMobileMenu onClick={() => setIsMobileActive((prev) => !prev)}>
-          {isMobileActive ? <LiaTimesSolid /> : <FiMenu />}
+          {isMobileActive ? <MdOutlineClose className="close" /> : <FaBars />}
         </S.ButtonMobileMenu>
 
         <S.LinksWrapper className={isMobileActive ? "active" : ""}>
@@ -66,6 +67,8 @@ export const Menu: React.FC = () => {
             </a>
           ))}
         </S.LinksWrapper>
+
+        <Button>Pré-venda digital</Button>
       </S.Wrapper>
     </S.Container>
   );

@@ -53,7 +53,7 @@ export const LinksWrapper = styled.div`
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 796px) {
     position: absolute;
     top: 4.52rem;
     left: -100%;
@@ -77,9 +77,13 @@ export const ButtonMobileMenu = styled.button`
 
   > svg {
     transform: scale(1.8);
+
+    &.close {
+      transform: scale(2.2);
+    }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 796px) {
     display: none;
   }
 `;
