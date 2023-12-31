@@ -10,6 +10,7 @@ export const Container = styled.button<IContainer>`
   text-transform: uppercase;
   border: 0;
   transition: 0.2s;
+  line-height: 1.125rem;
 
   &,
   > p,
