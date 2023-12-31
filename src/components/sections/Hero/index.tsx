@@ -5,11 +5,33 @@ import ps4 from "../../../assets/img/hero/ps4.svg";
 import ps5 from "../../../assets/img/hero/ps5.svg";
 import xbox from "../../../assets/img/hero/xboxxs.svg";
 import steam from "../../../assets/img/hero/steam.svg";
-
-import * as S from "./styles";
 import { Button } from "../../Button";
 
-const images = [ps4, ps5, xbox, steam];
+import * as S from "./styles";
+import { KeysImages } from "./styles";
+
+const images = [
+  {
+    name: "ps4",
+    src: ps4,
+    alt: "Logo do playstation escrito ps4 ao lado",
+  },
+  {
+    name: "ps5",
+    src: ps5,
+    alt: "Logo do playstation escrito ps5 ao lado",
+  },
+  {
+    name: "xbox",
+    src: xbox,
+    alt: "Logo do playstation escrito xbox series x ao lado",
+  },
+  {
+    name: "steam",
+    src: steam,
+    alt: "Logo da steam escrito steam ao lado",
+  },
+];
 
 export const Hero: FC = () => {
   return (
@@ -31,8 +53,13 @@ export const Hero: FC = () => {
         </S.ButtonWrapper>
 
         <S.ImagesWrapper>
-          {images.map((image, index) => (
-            <img src={image} key={index} />
+          {images.map((image) => (
+            <S.ImageWrapper
+              imagename={image.name as KeysImages}
+              key={image.name}
+            >
+              <img src={image.src} alt={image.alt} />
+            </S.ImageWrapper>
           ))}
         </S.ImagesWrapper>
       </S.Wrapper>
