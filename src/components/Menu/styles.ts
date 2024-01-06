@@ -58,9 +58,11 @@ export const LinksWrapper = styled.div`
     top: 4.52rem;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 4.52rem);
+    height: calc(100dvh - 4.52rem);
     flex-direction: column;
     transition: 0.6s;
+    background-color: var(--red-900);
+    z-index: 999;
 
     &.active {
       left: 0;
