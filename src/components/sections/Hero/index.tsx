@@ -3,12 +3,13 @@ import { FC } from "react";
 import heroLetter from "../../../assets/img/hero/heroLetter.png";
 import ps4 from "../../../assets/img/hero/ps4.svg";
 import ps5 from "../../../assets/img/hero/ps5.svg";
-import xbox from "../../../assets/img/hero/xboxxs.svg";
 import steam from "../../../assets/img/hero/steam.svg";
+import xbox from "../../../assets/img/hero/xboxxs.svg";
 import { Button } from "../../Button";
+import { KeysImages } from "./styles";
 
 import * as S from "./styles";
-import { KeysImages } from "./styles";
+import { SocialMedias } from "../../SocialMedias";
 
 const images = [
   {
@@ -63,6 +64,7 @@ export const Hero: FC = () => {
           ))}
         </S.ImagesWrapper>
       </S.Wrapper>
+      <SocialMedias />
     </S.Container>
   );
 };
