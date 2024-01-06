@@ -33,6 +33,7 @@ export const Container = styled.div`
   background-image: url(${heroBanner});
   background-size: cover;
   background-position: center;
+  position: relative;
 `;
 
 export const Wrapper = styled.div`
